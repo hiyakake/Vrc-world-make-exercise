@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VRChat World Exercise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <button id="menuButton">☰</button>
+  <h1>VRChat World Exercise</h1>
+</header>
+<nav id="menu" class="hidden">
+  <ul>
+    <li><a href="#" data-section="top">トップ</a></li>
+    <li><a href="#" data-section="exercise">エクササイズ</a></li>
+    <li><a href="#" data-section="stamp">スタンプカード</a></li>
+    <li><a href="#" data-section="history">履歴</a></li>
+    <li><a href="#" data-section="assistant">AIに質問</a></li>
+    <li><a href="#" data-section="data">データ管理</a></li>
+  </ul>
+</nav>
+<main>
+  <section id="top" class="section">ようこそ！</section>
+  <section id="exercise" class="section hidden">
+    <div id="inputBar" class="hidden">
+      <div class="tabs">
+        <button data-tab="symbols" class="active">記号</button>
+        <button data-tab="snippets">スニペット</button>
+      </div>
+      <div id="symbols" class="tabContent">
+        <button data-insert="{">{</button>
+        <button data-insert="}">}</button>
+        <button data-insert="[">[</button>
+        <button data-insert="]">]</button>
+        <button data-insert=".">.</button>
+      </div>
+      <div id="snippets" class="tabContent hidden">
+        <button data-snippet="print('Hello')">print('Hello')</button>
+      </div>
+    </div>
+    <textarea id="code" rows="10"></textarea>
+    <button id="submit">提出</button>
+    <div id="result"></div>
+  </section>
+  <section id="stamp" class="section hidden">
+    <div id="stampCard"></div>
+  </section>
+  <section id="history" class="section hidden">
+    <ul id="historyList"></ul>
+    <button id="clearHistory">履歴をクリア</button>
+  </section>
+  <section id="assistant" class="section hidden">
+    <textarea id="question" rows="4" placeholder="質問を入力"></textarea>
+    <button id="ask">質問する</button>
+    <div id="answer"></div>
+  </section>
+  <section id="data" class="section hidden">
+    <button id="export">エクスポート</button>
+    <input type="file" id="importFile" />
+    <button id="import">インポート</button>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

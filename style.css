@@ -1,0 +1,13 @@
+body { font-family: sans-serif; margin:0; }
+header { background:#333; color:#fff; padding:10px; position:relative; }
+#menuButton { background:none; border:none; color:#fff; font-size:24px; }
+nav { background:#eee; position:absolute; top:50px; left:0; right:0; }
+nav.hidden { display:none; }
+.section { padding:10px; }
+.hidden { display:none; }
+#inputBar { position:fixed; top:50px; left:0; right:0; background:#ddd; padding:5px; }
+#inputBar .tabs button { margin-right:5px; }
+#inputBar .tabContent { margin-top:5px; }
+#stampCard span { display:inline-block; width:20px; height:20px; margin:2px; background:#ccc; }
+#stampCard .earned { background:red; }
+
